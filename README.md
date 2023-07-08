@@ -17,9 +17,9 @@ If you want to understand how to implement this detector by yourself from scratc
 As of now, the code only contains the detection module, but you should expect the training module soon. :) 
 
 ## Requirements
-1. Python 3.5
-2. OpenCV
-3. PyTorch 0.4
+1. Python 3.10
+2. OpenCV 4.6
+3. PyTorch 2.0
 
 Using PyTorch 0.3 will break the detector.
 
