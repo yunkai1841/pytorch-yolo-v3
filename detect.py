@@ -101,6 +101,13 @@ def arg_parse():
         default="1,2,3",
         type=str,
     )
+    parser.add_argument(
+        "--label_names",
+        dest="label_names",
+        help="Names of the labels",
+        default="data/coco.names",
+        type=str,
+    )
 
     return parser.parse_args()
 
@@ -138,7 +145,7 @@ if __name__ == "__main__":
     CUDA = torch.cuda.is_available()
 
     num_classes = 80
-    classes = load_classes("data/coco.names")
+    classes = load_classes(args.label_names)
 
     # Set up the neural network
     print("Loading network.....")
